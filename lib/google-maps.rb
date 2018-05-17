@@ -38,7 +38,7 @@ module Google
     protected
 
     def self.options_with_defaults(options)
-      {language: self.default_language}.merge(options)
+      { language: self.default_language, key: Google::Maps.api_key }.compact.merge(options)
     end
   end
 end
